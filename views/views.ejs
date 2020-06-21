@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<meta charset="utf-8">
+	<title> chatroom </title>
+	<script src="jquery.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="client.js"></script>
+	<link rel="stylesheet" type="text/css" href ="layout.css">
+ </head>
+ <body>
+	<div id="loginGUI">
+	 	<h3> Enter your username and your password  </h3>
+	 	<div id="AuthenticationVerify" >
+			 <div id="inputUsername">
+			 	 <label> Username </label> 
+			 	<input type = "text" id = "txtUsername"/>
+			 </div>
+			 
+			 <div id="inputPassword">
+			 	<label> Password </label>
+			 	<input type = "text" id = "txtPassword"/>
+			 </div>
+			 <div>
+			 	<input type = "button" value ="Login" id = "btnLogin"/>
+			 </div>
+		</div>
+	</div>
+
+<div id="roomListGUI">
+ 	<h1> List of the chatrooms</h1>
+ 	<div id ="room_list">
+		<ul id="room_name_list">			
+			<li > <a href = '#' class="room" id= "1" name= "room1" >room1</a></li>
+			<li>  <a href = '#' class="room" id= "2" name= "room2">room2</a></li>
+			<li>  <a href = '#' class="room" id= "3" name= "room3">room3</a></li>
+			<li>  <a href = '#' class="room" id= "4" name= "room4a">room4a</a></li>
+			<li>  <a href = '#' class="room" id= "5" name= "room4b">room4b</a></li>
+		</ul>
+ 	</div>
+ 	<input type="button" id="btnLogout" value = "Logout" />
+ </div>
+
+ <div id="roomGUI">
+ 		<h3 id="name_room">  </h3>
+ 		<div  class="chatForm">
+			<div class ="left">	
+				<div class="boxTitle"> User Online</div>
+				<div class ="boxContent">		
+				</div>
+				<div>
+						
+				</div>
+			</div>
+
+			<div class ="middleLeft">
+				<div style='margin-bottom: 5px' > <b>  Hello: <span id="currentUser"> </span> </b>
+					<input type="button" class="btnReturn" value = "Return" />	
+				</div>
+				
+				<div class = "listMessage" id ="listMsg"></div>
+				<div  class = "thongbao" > </div>
+				<input type ="text" class ="txtMessage" id="txtMsg"/>
+				<input  type ="button" class ="btnSendMessage" id ="btnSend" value="Send" />
+			</div>
+
+			<div class ="middleRight">
+				<div style='margin-bottom: 5px' > <b> chat with: <span class="otherUser"> </span> </b>
+					<input type="button" class="stopPrivateChat" value = "Stop chat" />	
+				</div>
+				
+				<div class = "pListMessage" id ="pListMsg"></div>
+				<input type ="text" class ="pTxtMessage" id="pTxtMsg"/>
+				<input  type ="button" class ="btnSendMessage" id ="btnPSend" value="Send" />	
+			</div>
+
+		</div>
+ </div>
+
+<div id="AdminRoomGUI">
+ 		<h3 id="admin_name_room">  </h3>
+	 		<div>
+	 			<div>
+	 					<label> set private </label>
+						
+						<input type="checkbox"  id="myCheck">	
+				</div>
+
+				<div>
+	 					<label> set close </label>
+						
+						<input type="checkbox"  id="closeCheck">	
+				</div>
+			</div>
+ 		<div  class="chatForm">
+			<div class ="left">	
+				<div class="boxTitle"> User Online</div>
+				<div class ="boxContent"></div>	
+			</div>
+			
+			<div class ="middleLeft">
+				<div style='margin-bottom: 5px' ><b> Hello admin: <span id="currentAdmin"> </span>	</b>
+				<input type="button" class="btnReturn" value = "Return" />
+				</div>	
+				<div class = "listMessage" id ="listAdminMsg"></div>
+				<div  class = "thongbao" > </div>
+				<input type ="text" class ="txtMessage" id="txtAdminMsg"/>
+				<input  type ="button" class ="btnSendMessage" id ="btnAdminSend" value="Send" />			
+			</div>	
+
+			<div class ="middleRight">
+				<div style='margin-bottom: 5px' > <b> chat with: <span class="otherUser"> </span> </b>
+					<input type="button" class="stopPrivateChat" value = "Stop chat" />	
+				</div>
+				
+				<div class = "pListMessage" id ="pListAdminMsg"></div>
+				<input type ="text" class ="pTxtMessage" id="pTxtAdminMsg"/>
+				<input  type ="button" class ="btnSendMessage" id ="btnPAdminSend" value="Send" />	
+			</div>
+
+			<div class = "right">
+				<div class="boxTitle"> Join request</div>
+				<div id ="boxRequest"></div>	
+			</div>
+			<div class = "superRight">
+				<div class="boxTitle"> Member</div>
+				<div id ="boxMember"></div>	
+			</div>
+		
+ </div>
+
+ </body>
+</html>

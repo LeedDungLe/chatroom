@@ -1,0 +1,103 @@
+body{background-color: #ebeef4}
+#txtUsername{background-color: transparent;float:right; border: solid 1px black;}
+#txtPassword{background-color: transparent;float:right; border: solid 1px black;}
+#inputUsername{margin-top: 5px; margin-bottom: 5px;}
+#inputPassword{margin-top: 5px; margin-bottom: 5px;}
+
+
+#room_list ul li {
+	text-decoration: : none;
+	color: #333;
+	font-weight: bold;
+	display: block;
+	width: : 550px;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #e8e8e8;
+	//padding: 0 1em;
+}
+
+#room_list  {
+	background: #8ad385;
+	
+	
+	list-style-type: none;
+}
+
+#room_list ul li:hover{
+	background: #CDE2CD;
+}
+
+.left, .middleLeft, .right:{min-height:300px}
+.left{width:15%;margin-right: 3px; float:left; background-color: #f0f2d0 }
+.middleLeft{width: 30%; float:left ;margin-right: 3px; background-color: #d4f9f8}
+.middleRight{width: 20%; float:left ;margin-right: 3px; background-color: #d4f9f8}
+.right{width:20%; float:right; background-color: #f0f2d0 }
+.superRight{width:15%; float:right; margin-right: 3px; background-color: #f0f2d0 }
+.btnReturn{float:right;}
+.stopPrivateChat{float:right;}
+
+.boxTitle{border: solid 1px black; padding:5px; text-align: center; font-weight: bold}
+
+
+.listMessage, .pListMessage {overflow-y: scroll;border: solid 1px black; height:200px; background-color: #fcead4; margin-bottom: 15px;}
+.txtMessage, .pTxtMessage{background-color: transparent; border : solid 1px black;}
+.thongbao{height:20px; background-color: transparent}
+
+
+#AuthenticationVerify{
+	position: absolute;
+	width:250px;
+}
+
+#loginGUI{
+	position: absolute;
+	height:300px;
+  	width:350px;
+	top: 20px;
+  	left: 500px;
+}
+
+#roomListGUI{
+	position: absolute;
+	 top: 20px;
+  	left: 10px;
+  	height:600px;
+  	width:1300px;
+  	
+}
+
+
+
+#roomGUI{
+	position: absolute;
+	 top: 20px;
+  	left: 10px;
+  	height:600px;
+  	width:1500px;
+ } 	
+
+ #AdminRoomGUI{
+	position: absolute;
+	 top: 20px;
+  	left: 10px;
+  	height:600px;
+  	width:1500px;
+ } 	
+
+
+#loginGUI{
+	z-index: 3;
+}
+
+#roomListGUI{
+	z-index: 2;
+}
+
+#roomGUI{
+	z-index:1;
+}
+
+#AdminRoomGUI{
+	z-index: 4;
+}
